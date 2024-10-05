@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function checkpnr(f) {
+            let pnr = f.pnr.value;
+            if (pnr.length < 10) {
+                alert("Invalid PNR Number");
+            }
+        }
+    </script>
+</head>
+<body style="background-color: bisque; color: black;">
+    <form action="http://localhost:8080/servlet/ReservationStatusInformationServlet" target="f2">
+        <h2 style="text-align: center; font-style: italic;"><b>Self Care Customer Service</b></h2>
+        <div style="text-align: center;">
+            Type Your PNR No: <input type="text" name="pnr" value="0" onblur="checkpnr(this.form)">
+            <br><br>
+            <input type="submit" value="FIND STATUS">
+        </div>
+    </form>
+</body>
+</html>
